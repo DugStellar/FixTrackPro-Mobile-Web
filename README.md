@@ -26,9 +26,5 @@ This repository houses the source code for both the web microsite and the mobile
 * **Database:** MySQL / Hosted Online Relational Database
 * **CI/CD & Management:** Azure DevOps (Kanban Board) & GitHub Actions
 
----
 
-## 🚀 Getting Started
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/YOUR-USERNAME/FixTrackPro-Mobile-Web.git](https://github.com/YOUR-USERNAME/FixTrackPro-Mobile-Web.git)
+
