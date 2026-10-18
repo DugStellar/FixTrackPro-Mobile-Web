@@ -1,0 +1,31 @@
+name: FixTrack Pro CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup PHP Environment
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+
+    - name: Validate Syntax (Linting PHP)
+      run: |
+        for file in api/*.php; do
+          php -l "$file"
+        done
+
+    - name: Validate Web Files
+      run: |
+        test -f index.html
+        test -f schema.sql
